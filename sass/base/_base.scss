@@ -2,8 +2,8 @@
 *::after,
 *::before {
   margin: 0;
-  box-sizing: inherit;
   padding: 0;
+  box-sizing: border-box;
 }
 @font-face {
   src: url(../../fonts/B_Yekan/Yekan.ttf);
@@ -34,8 +34,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // background: linear-gradient(to left, rgba(#719ddb, 0.5), rgba(#719ddb, 0.5)),
-  // url(../../img/home__pictures-1.jpg);
 
   background-position: center center;
   background-size: cover;
@@ -43,6 +41,8 @@ body {
 }
 
 .background-img {
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;

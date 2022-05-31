@@ -3,11 +3,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba($color--blue-dark, 1); //!  todo
+  background-color: rgba($color--blue-dark, 0.8); //!  todo
   border-radius: 2rem;
   width: 30vw;
-  height: 60vh;
-  box-shadow: 1rem 0 rgba($color--black, 0.2);
+  height: 70vh;
+  box-shadow: 0rem 2rem 4rem rgba($color--black, 0.2);
   &__text-1 {
     font-family: $font--nastaliq;
     font-size: 2.4rem;
@@ -15,7 +15,7 @@
   &__logo {
     display: grid;
     place-items: center;
-    & img {
+    img {
       width: 5rem;
       color: $color--white;
     }
@@ -36,27 +36,113 @@
 }
 
 //* form-login *//
-.form-login {
-  & * {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.form {
+  display: flex;
+  flex-direction: column;
 
-  & .email {
-    &__icon {
-      width: 2rem;
-      height: 2rem;
-      border-radius: 50%;
-      background-color: $color--blue-dark;
-      color: white;
+  &-login {
+    &__email-box input {
+      margin-bottom: -2rem;
+    }
+    .email {
+      &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        height: 4rem;
+        fill: white;
+        border-radius: 50%;
+        background-image: linear-gradient(
+          to right,
+          rgba($color--blue-main, 0.9),
+          rgba($color--blue-dark, 0.9)
+        );
+        transform: translatey(4.2rem);
+      }
+    }
+
+    input {
+      width: 28rem;
+      padding: 1.3rem;
+      padding-left: 0.5rem;
+      border-radius: 4px;
+      border: none;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
+      direction: ltr;
+      text-align: left;
+      box-shadow: 0 0.5rem 1rem rgba($color--black, 0.1);
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 1rem 1.5rem rgba($color--black, 0.2);
+        border-bottom: 3px solid $color--green;
+        &:invalid {
+          border-bottom: 3px solid $color--red;
+        }
+      }
+      &::-webkit-input-placeholder {
+        color: rgba($color--black, 0.7);
+      }
     }
   }
-  & input {
-    direction: ltr;
+  &-text {
+    display: flex;
+    margin-top: 0.5rem;
+    &__link {
+      &,
+      &:visited,
+      &:link {
+        text-decoration: none;
+        color: aqua;
+        font-family: $font--text;
+        font-size: 1.5rem;
+      }
+    }
+    &__checkbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      display: flex;
+      width: max-content;
+      .form-text__check1 {
+        cursor: pointer;
+        width: 2rem;
+        border: 0;
+      }
+      .form-text__label {
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-family: $font--text;
+        width: max-content;
+        color: rgba($color--white, 0.5);
+      }
+    }
+  }
+  .btn {
+    margin-top: 2rem;
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+    font-family: $font--main;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 0.5rem 3.5rem;
+    font-size: 2rem;
+    color: $color--white;
+    background: linear-gradient(to right, $color--blue-main, $color--blue-dark);
+    box-shadow: 0 1rem 3rem rgba($color--black, 0.15);
+    transition: all 0.2s;
+    &:hover {
+      box-shadow: 0 1rem 2rem rgba($color--black, 0.2);
+      transform: scale(1.04);
+      background: darken($color--blue-main, 10%);
+    }
   }
 }
-
 //* footer *//
 .footer {
   position: absolute;

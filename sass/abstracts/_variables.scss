@@ -42,13 +42,15 @@
 }
 
 // variables sass
-$color--white: var(--white);
-$color--blue-main: var(--blue-main);
-$color--blue-dark: var(--blue-dark);
-$color--black: var(--black);
+$color--white: #ffffff;
+$color--blue-main: #0057d2;
+$color--blue-dark: #1d2f60;
+$color--black: black;
 $color--gray-main: var(--gray-main);
 $color--gray-text: var(--gray-text);
 $color--gray-light: var(--gray-light);
+$color--red: red;
+$color--green: green;
 
 // fonts
 $font--main: font-main;

@@ -34,8 +34,8 @@ big-desktop
 *::after,
 *::before {
   margin: 0;
-  box-sizing: inherit;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 @font-face {
   src: url(../../fonts/B_Yekan/Yekan.ttf);
@@ -69,6 +69,8 @@ body {
   justify-content: center; }
 
 .background-img {
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -165,7 +167,7 @@ body {
   position: absolute !important; }
 
 .header-text-white {
-  color: var(--white) !important; }
+  color: #ffffff !important; }
 
 .font-main {
   font-family: font-main; }
@@ -181,11 +183,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(var(--blue-dark), 1);
+  background-color: rgba(29, 47, 96, 0.8);
   border-radius: 2rem;
   width: 30vw;
-  height: 60vh;
-  box-shadow: 1rem 0 rgba(var(--black), 0.2); }
+  height: 70vh;
+  box-shadow: 0rem 2rem 4rem rgba(0, 0, 0, 0.2); }
   .main__text-1 {
     font-family: font-nastaliq;
     font-size: 2.4rem; }
@@ -194,7 +196,7 @@ body {
     place-items: center; }
     .main__logo img {
       width: 5rem;
-      color: var(--white); }
+      color: #ffffff; }
   .main__h1 {
     font-family: font-nastaliq;
     font-size: 4rem;
@@ -206,20 +208,84 @@ body {
     font-size: 2rem;
     padding-top: 1rem; }
 
-.form-login * {
+.form {
   display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.form-login .email__icon {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  background-color: var(--blue-dark);
-  color: white; }
-
-.form-login input {
-  direction: ltr; }
+  flex-direction: column; }
+  .form-login__email-box input {
+    margin-bottom: -2rem; }
+  .form-login .email__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    fill: white;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, rgba(0, 87, 210, 0.9), rgba(29, 47, 96, 0.9));
+    transform: translatey(4.2rem); }
+  .form-login input {
+    width: 28rem;
+    padding: 1.3rem;
+    padding-left: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    direction: ltr;
+    text-align: left;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
+    .form-login input:focus {
+      outline: none;
+      box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2);
+      border-bottom: 3px solid green; }
+      .form-login input:focus:invalid {
+        border-bottom: 3px solid red; }
+    .form-login input::-webkit-input-placeholder {
+      color: rgba(0, 0, 0, 0.7); }
+  .form-text {
+    display: flex;
+    margin-top: 0.5rem; }
+    .form-text__link, .form-text__link:visited, .form-text__link:link {
+      text-decoration: none;
+      color: aqua;
+      font-family: font-text;
+      font-size: 1.5rem; }
+    .form-text__checkbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      display: flex;
+      width: max-content; }
+      .form-text__checkbox .form-text__check1 {
+        cursor: pointer;
+        width: 2rem;
+        border: 0; }
+      .form-text__checkbox .form-text__label {
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-family: font-text;
+        width: max-content;
+        color: rgba(255, 255, 255, 0.5); }
+  .form .btn {
+    margin-top: 2rem;
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+    font-family: font-main;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 0.5rem 3.5rem;
+    font-size: 2rem;
+    color: #ffffff;
+    background: linear-gradient(to right, #0057d2, #1d2f60);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
+    transition: all 0.2s; }
+    .form .btn:hover {
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+      transform: scale(1.04);
+      background: #00429f; }
 
 .footer {
   position: absolute;
@@ -229,6 +295,6 @@ body {
   text-align: center;
   background-image: linear-gradient(to left, rgba(0, 87, 210, 0.6), rgba(0, 87, 210, 0.6));
   font-size: 1.5rem;
-  color: var(--white);
+  color: #ffffff;
   padding: 1rem 0;
   font-family: font-text; }
