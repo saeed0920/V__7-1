@@ -1,0 +1,80 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color--blue-dark, 1); //!  todo
+  border-radius: 2rem;
+  width: 30vw;
+  height: 60vh;
+  box-shadow: 1rem 0 rgba($color--black, 0.2);
+  &__text-1 {
+    font-family: $font--nastaliq;
+    font-size: 2.4rem;
+  }
+  &__logo {
+    display: grid;
+    place-items: center;
+    & img {
+      width: 5rem;
+      color: $color--white;
+    }
+  }
+  &__h1 {
+    font-family: $font--nastaliq;
+    font-size: 4rem;
+    margin-top: -2rem;
+    padding-bottom: 1rem;
+  }
+  &__flag {
+    width: 4rem;
+  }
+  &__h2 {
+    font-size: 2rem;
+    padding-top: 1rem;
+  }
+}
+
+//* form-login *//
+.form-login {
+  & * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & .email {
+    &__icon {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background-color: $color--blue-dark;
+      color: white;
+    }
+  }
+  & input {
+    direction: ltr;
+  }
+}
+
+//* footer *//
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  //   filter: opacity(70%);
+  text-align: center;
+  //   background-color: var(--blue-main);
+  background-image: linear-gradient(
+    to left,
+    //! dont reapet your self
+    rgba(#0057d2, 0.6),
+    // todo
+    rgba(#0057d2, 0.6) // todo
+  );
+  font-size: 1.5rem;
+  color: $color--white;
+  padding: 1rem 0;
+  font-family: $font--text;
+}

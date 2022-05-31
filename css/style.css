@@ -20,6 +20,15 @@ tab-big
 
 big-desktop
 */
+:root {
+  --white: #ffffff;
+  --blue-main: #0057d2;
+  --blue-dark: #1d2f60;
+  --black: black;
+  --gray-main: #eeefef;
+  --gray-text: #63666f;
+  --gray-light: ##e5e5e5; }
+
 /* animation */
 *,
 *::after,
@@ -28,15 +37,46 @@ big-desktop
   box-sizing: inherit;
   padding: 0; }
 
+@font-face {
+  src: url(../../fonts/B_Yekan/Yekan.ttf);
+  font-family: font-main; }
+
+@font-face {
+  src: url(../../fonts/Far_Nazanin/Far_Nazanin.ttf);
+  font-family: font-header; }
+
+@font-face {
+  src: url(../../fonts/Far_Diplomat/Far_Diplomat.ttf);
+  font-family: font-text; }
+
+@font-face {
+  src: url(../../fonts/IranNastaliq/IranNastaliq.ttf);
+  font-family: font-nastaliq; }
+
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
 
 body {
+  direction: rtl;
   font-family: sans-serif;
   min-height: 100vh;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center;
+  background-position: center center;
+  background-size: cover;
+  justify-content: center; }
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: linear-gradient(to left, rgba(113, 157, 219, 0.5), rgba(113, 157, 219, 0.5)), url(../../img/home__pictures-1.jpg);
+  filter: blur(5px); }
 
 /* uniti css */
 .font-sml {
@@ -123,3 +163,72 @@ body {
 
 .position-ab {
   position: absolute !important; }
+
+.header-text-white {
+  color: var(--white) !important; }
+
+.font-main {
+  font-family: font-main; }
+
+.font-header {
+  font-family: font-header; }
+
+.font-text {
+  font-family: font-text; }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(var(--blue-dark), 1);
+  border-radius: 2rem;
+  width: 30vw;
+  height: 60vh;
+  box-shadow: 1rem 0 rgba(var(--black), 0.2); }
+  .main__text-1 {
+    font-family: font-nastaliq;
+    font-size: 2.4rem; }
+  .main__logo {
+    display: grid;
+    place-items: center; }
+    .main__logo img {
+      width: 5rem;
+      color: var(--white); }
+  .main__h1 {
+    font-family: font-nastaliq;
+    font-size: 4rem;
+    margin-top: -2rem;
+    padding-bottom: 1rem; }
+  .main__flag {
+    width: 4rem; }
+  .main__h2 {
+    font-size: 2rem;
+    padding-top: 1rem; }
+
+.form-login * {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.form-login .email__icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--blue-dark);
+  color: white; }
+
+.form-login input {
+  direction: ltr; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-image: linear-gradient(to left, rgba(0, 87, 210, 0.6), rgba(0, 87, 210, 0.6));
+  font-size: 1.5rem;
+  color: var(--white);
+  padding: 1rem 0;
+  font-family: font-text; }

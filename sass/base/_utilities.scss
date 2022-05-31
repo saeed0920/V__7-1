@@ -89,3 +89,18 @@
 .position-ab {
   position: absolute !important;
 }
+// fonts
+.header-text-white {
+  color: $color--white !important;
+}
+
+.font-main {
+  font-family: $font--main;
+}
+
+.font-header {
+  font-family: $font--header;
+}
+.font-text {
+  font-family: $font--text;
+}
