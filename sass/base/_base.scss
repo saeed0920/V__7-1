@@ -6,19 +6,19 @@
   box-sizing: border-box;
 }
 @font-face {
-  src: url(../../fonts/B_Yekan/Yekan.ttf);
+  src: url(../fonts/B_Yekan/Yekan.ttf);
   font-family: font-main;
 }
 @font-face {
-  src: url(../../fonts/Far_Nazanin/Far_Nazanin.ttf);
+  src: url(../fonts/Far_Nazanin/Far_Nazanin.ttf);
   font-family: font-header;
 }
 @font-face {
-  src: url(../../fonts/Far_Diplomat/Far_Diplomat.ttf);
+  src: url(../fonts/Far_Diplomat/Far_Diplomat.ttf);
   font-family: font-text;
 }
 @font-face {
-  src: url(../../fonts/IranNastaliq/IranNastaliq.ttf);
+  src: url(../fonts/IranNastaliq/IranNastaliq.ttf);
   font-family: font-nastaliq;
 }
 
@@ -54,7 +54,7 @@ body {
       rgba(#719ddb, 0.5),
       rgba(#719ddb, 0.5)
     ),
-    url(../../img/home__pictures-1.jpg);
+    url(../img/home__pictures-1.jpg);
   filter: blur(5px);
 }
 
